@@ -12,12 +12,13 @@ node{
          sh "'${mvnHome}/bin/mvn' test surefire-report:report"
       }  
     
-      stage('Deploy') {     
-           /*sshagent(['Tomcat-jenkins']) {
+      stage('Deploy') {   
+            echo 'succesfully compiled...'
+           sshagent(['Tomcat-jenkins']) {
                sh 'scp -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war jenkins@35.193.54.220:/opt/tomcat/webapps'
               
-          }*/
-         echo 'succesfully compiled...'
+          }
+         
      }
       
  }
