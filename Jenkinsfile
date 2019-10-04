@@ -18,9 +18,9 @@ node{
     
       stage('Deploy') {   
             echo 'deploy stage...'
-           /*sshagent(['Tomcat-jenkins']) {
+           sshagent(['Tomcat-jenkins']) {
                sh 'scp -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war jenkins@35.193.54.220:/opt/tomcat/webapps'
-          }*/
+          }
      }
       
  }
