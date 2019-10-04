@@ -8,6 +8,7 @@ node{
       stage('Build'){
          //// Get maven home path and build
         echo 'build stage...'
+        sh 'mvn -version'    
         sh "${mvnHome}/bin/mvn clean package -Dmaven.test.skip=true"
       }
      stage ('Test-JUnit'){
